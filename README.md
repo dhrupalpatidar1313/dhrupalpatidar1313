@@ -39,7 +39,7 @@
 ---
 
 ### 📫 Reach Out
-- 💼 [LinkedIn](https://www.linkedin.com/in/dhrupalpatidar/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/dhrupal-patel-85667a325/)
 - 💌 dhrupalpatidar1313@gmail.com
 - 📂 [Explore my work →](https://github.com/dhrupalpatidar1313)
 
