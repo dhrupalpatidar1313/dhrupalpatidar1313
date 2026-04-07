@@ -1,0 +1,236 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+% FIX 1: Changed \RequirePackage -> \usepackage (RequirePackage is for .sty files only)
+% FIX 2: Removed duplicate \usepackage{tikz} (was also loaded below)
+% FIX 3: Removed conflicting fontawesome5; using fontawesome only (all icons used are in this package)
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+
+% FIX 4: Removed \usetikzlibrary{svg.path} — unused, causes warnings
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{Black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - REDUCED SPACING
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape DHRUPAL PATEL} \\ \vspace{3pt}
+    \small \href{tel:+919512453900}{ \raisebox{-0.1\height}\faPhone\ \underline{+91-9512453900} ~} \href{mailto:dhrupalpatidar1313@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{dhrupalpatidar1313@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/dhrupal-patel-85667a325/}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{dhrupal-patel-85667a325}}  ~
+    \href{https://github.com/dhrupalpatidar1313}{\raisebox{-0.2\height}\faGithub\ \underline{dhrupalpatidar1313}} ~
+    \vspace{-6pt}
+\end{center}
+
+
+%----------SUMMARY----------
+\section{SUMMARY}
+\small{
+AI Engineer with 1+ year of hands-on experience designing and deploying production-grade Generative AI systems, RAG pipelines, and multi-agent architectures across healthcare and enterprise domains. Deep expertise in LangChain, LangGraph, and CrewAI for orchestrating LLM workflows, with semantic search implementations over PGVector, Pinecone, Milvus, and Azure AI Search. Proven ability to translate complex AI research into scalable backend systems using FastAPI and Docker, while applying quantization and prompt optimization techniques to reduce inference cost and latency. Experienced in end-to-end ML pipelines spanning data ingestion, OCR-based ETL, embedding generation, model fine-tuning (CNNs, transformers), and cloud deployment on AWS SageMaker. Consistently delivers measurable impact --- 65\% reduction in manual care planning effort, 40\% token usage reduction, and 95\%+ vision model accuracy on constrained hardware.
+}
+\vspace{-4pt}
+
+
+%------SKILLS-------
+\section{SKILLS}
+
+\textbf{Languages:} Python, SQL, R, Bash \\
+
+\textbf{GenAI \& Semantic Search:} Retrieval-Augmented Generation (RAG), Semantic Search, Embeddings, Transformer Models (BERT, GPT), Prompt Engineering \\
+
+\textbf{Frameworks \& APIs:} LangChain, LangGraph, CrewAI, FastAPI, REST APIs, Tornado (Basic), Postman \\
+
+\textbf{Vector DB \& Search:} Azure AI Search, PGVector, Pinecone, Milvus \\
+
+\textbf{ML \& Data Stack:} PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, OpenCV, OCR \\
+
+\textbf{Tools \& Deployment:} Docker, Git, AWS SDK, HuggingFace, OpenAI SDK, Tableau
+\vspace{-4pt}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading{Sevina Technologies}{Aug 2025 -- Present}{Associate AI Engineer / AI Researcher}{Ahmedabad, India}
+      \resumeItemListStart
+        % FIX 5: Removed \normalsize inside \resumeItem — it overrides the \small sizing defined in the command
+        \resumeItem{\textbf{RAG-based Care Plan Automation:} Designed Retrieval-Augmented Generation (RAG) pipeline using LangChain with vector embeddings stored in PGVector; implemented semantic search over structured + unstructured patient data from PointClickCare APIs, generating personalized care plans for 200+ patients and reducing manual effort by 65\%.}
+        \resumeItem{\textbf{Document Processing Pipeline:} Built Python-based ETL pipeline for healthcare documents including OCR extraction, text cleaning, chunking, embedding generation, and indexing into vector databases for semantic retrieval.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Wappnet Systems Pvt. Ltd \href{https://drive.google.com/file/d/1xocfnRe3aknzLOjqRDMWxHZ2MayeyItz/view?usp=sharing}{\raisebox{-0.1\height}\faExternalLink}}{Feb 2025 -- July 2025}{AI Engineer / Gen AI Developer}{Ahmedabad, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Multi-Agent Restaurant Chatbot:} Built Gen AI-powered restaurant chatbot using LangChain and Crew AI; handled order placement, cart management, and real-time order tracking via FastAPI. Reduced token usage by 40\% through optimized prompt engineering.}
+        \resumeItem{\textbf{PMS Automation System:} Automated Jira and Notion workflows using N8N to trigger real-time notifications to Gmail and Slack; reduced notification delay from 15 minutes to <30 seconds, improving sprint velocity by 20\%.}
+        \resumeItem{\textbf{Form Validation with Vision Models:} Deployed quantized vision models (INT8) locally to validate 12+ form field types on low-spec systems (4GB RAM); achieved 95\% field detection accuracy with 3x faster inference.}
+      \resumeItemListEnd
+        
+    \resumeSubheading{Parul University \href{https://drive.google.com/file/d/1QNAeSf13SRJA4YqusgtArNh_M49QT1rp/view?usp=sharing}{\raisebox{-0.1\height}\faExternalLink}}{Dec 2024 -- Feb 2025}{AI/ML Developer Intern}{Offline}
+      \resumeItemListStart
+        \resumeItem{\textbf{Multilabel Image Classification (CNN):} Built ResNet-50 based CNN for multilabel classification; achieved 88\% F1-score through data augmentation and hyperparameter tuning on 10K+ images.}
+        \resumeItem{\textbf{Fake GST Transaction Detection (Hackathon):} Preprocessed 50K+ transaction records and developed MLP neural network achieving 91\% accuracy in fraud detection; enhanced understanding of model evaluation techniques.}
+        \resumeItem{\textbf{Podcast Summarization with Speaker Diarization:} Implemented Pyannote speaker diarization to segment 2+ hour podcasts; generated transcriptions using Whisper and summarized content using transformer-based NLP, reducing listening time by 80\%.}
+      \resumeItemListEnd 
+  
+  \resumeSubHeadingListEnd
+\vspace{-2pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+          % FIX 6: Crop Disease Detection had a bare \faExternalLink with no \href — added placeholder; replace URL with actual link
+          {{\textbf{\large{Crop Disease Detection \href{https://github.com/dhrupalpatidar1313}{\raisebox{-0.1\height}\faExternalLink}}}} $|$ \large{{Deep Learning}}}{Sept 2024}
+          \resumeItemListStart
+            \resumeItem{Developed CNN-based plant disease detection system using transfer learning (VGG16) to classify 10 disease types across 5 crop species; achieved 94\% accuracy on 12K+ images with real-time inference.}
+            \resumeItem{Applied augmentation techniques (rotation, zoom, flip) and preprocessing (normalization, resizing) to handle dataset imbalance; improved validation accuracy from 76\% to 94\%.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+        \resumeProjectHeading
+          {{\textbf{\large{Flight Price Prediction with AWS SageMaker \href{https://github.com/dhrupalpatidar1313/AWS-Sagemaker-Flight-Price-Prediction}{\raisebox{-0.1\height}\faExternalLink}}}} $|$ \large{{Machine Learning}}}{July 2024}
+          \resumeItemListStart
+            \resumeItem{Processed 100K+ flight records on AWS SageMaker; engineered 15+ features (datetime, route popularity, booking lag) and applied encoding/scaling techniques.}
+            \resumeItem{Trained Random Forest and XGBoost models achieving RMSE of 1245 rupees; deployed on SageMaker endpoint for real-time predictions with S3-based data versioning.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+        
+       \resumeProjectHeading
+          {\textbf{\large{{Movie Recommendation System \href{https://github.com/dhrupalpatidar1313/Movie_recommendation}{\raisebox{-0.1\height}\faExternalLink}}}}  $|$ \large{{Machine Learning}}}{June 2024}
+          \resumeItemListStart
+            \resumeItem{Implemented content-based filtering using TF-IDF vectorization and cosine similarity on 5K+ movie database; optimized similarity calculations reducing response time from 2.4s to 1.2s (50\% improvement).}
+          \resumeItemListEnd 
+          \vspace{-5pt}
+          
+    \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------CERTIFICATIONS---------------
+\section{CERTIFICATIONS}
+\small{
+\href{https://coursera.org/share/c965a039dfc3984ebfd80295bed803e4}{\underline{Google Data Analytics Professional Certificate}} $|$ 
+\href{https://drive.google.com/file/d/18thMhHQx5MA0jagCc4TYZ0O-ObxFOFLs/view?usp=sharing}{\underline{Python Certification}}
+}
+
+\end{document}
